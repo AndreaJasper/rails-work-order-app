@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -25,3 +26,7 @@ sqlite '1.4'
 * Deployment instructions
 
 * ...
+=======
+# rails-work-order-app
+A rails app for managing work orders.
+>>>>>>> 68ef84213ad68ae70f3a3e41e4f9db5b3bc4b78f
