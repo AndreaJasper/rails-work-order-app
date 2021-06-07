@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root "workorders#index"
 
-  get "/workorders", to: "workorders#index"
+  resources :workorders, only: [:new, :create, :show]
 end

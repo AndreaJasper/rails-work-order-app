@@ -1,2 +1,19 @@
-<h1>Hello, Rails</h1>
-<h3>Does this work</h3>
+<h1>Work Orders</h1>
+<ul>
+  <% @workorders.each do |workorder| %>
+    <li>
+      <%= link_to workorder.title, workorder %>
+    </li>
+    <li>
+      <%= workorder.multiplier %>
+    </li>
+    <li>
+      <%= workorder.labor_hours %>
+    </li>
+    <li>
+      <%= workorder.description %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Work Order", new_workorder_path %>
