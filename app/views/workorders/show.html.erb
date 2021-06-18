@@ -3,4 +3,18 @@
 <p><%= @workorder.multiplier %></p>
 <p><%= @workorder.labor_hours %></p>
 <p><%= @workorder.description %></p>
-<%= link_to "Edit", edit_workorder_path %>
+<ul>
+  <li><%= link_to "Edit", edit_workorder_path(@workorder) %></li>
+  <li><%= link_to "Destroy", workorder_path(@workorder),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  </li>
+</ul>
+
+<h2>Add a user</h2>
+<%= form_with model: [ @workorder, @workorder.user.build ] do |f| %>
+  <%= f.label :user %>
+  <%= f.text_field :user %>
+  <%= f.submit %>
+<% end %>
+

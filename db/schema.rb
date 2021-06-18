@@ -26,8 +26,11 @@ ActiveRecord::Schema.define(version: 2021_06_06_203724) do
     t.text "description"
     t.integer "multiplier"
     t.integer "labor_hours"
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_workorders_on_user_id"
   end
 
+  add_foreign_key "workorders", "users"
 end

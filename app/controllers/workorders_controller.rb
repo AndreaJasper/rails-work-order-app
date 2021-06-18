@@ -35,6 +35,13 @@ class WorkordersController < ApplicationController
     end
   end
 
+  def destroy
+    @workorder = Workorder.find(params[:id])
+    @workorder.destroy
+
+    redirect_to root_path
+  end
+
   private
 
   def workorder_params
