@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  get "/workorders", to: "workorders#index"
+  root "workorders#index"
+
+  resources :users
+  resources :workorders
 end
