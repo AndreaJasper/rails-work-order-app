@@ -1,12 +1,21 @@
 class UsersController < ApplicationController
+  def new
+    @user = User.new
+  end
+
   def create
-    @workorder = Workorder.find(params[:workorder_id])
-    @user = @workorder.user.create(user_params)
-    redirect_to workorder_path(@workorder)
+    @user = User.new(user_params)
+
+    if @user.save
+      redirect_to '/'
+    else
+      redirect_to '/signup'
+    end
   end
 
   private
-    def user_params
-      params.require(:user).permit(:name)
-    end
+
+  def user_params
+    params.require(:user).permit(:username, :name, :email, :password)
+  end
 end
