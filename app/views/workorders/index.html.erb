@@ -1,17 +1,17 @@
 <h1>Work Orders</h1>
 <ul>
-  <% @workorders.each do |workorder| %>
+  <% @workorders.each do |w| %>
     <li>
-      <%= link_to workorder.title, workorder %>
+      <%= link_to w.title, workorder %>
     </li>
     <li>
-      <%= workorder.multiplier %>
+      <%= w.multiplier %>
     </li>
     <li>
-      <%= workorder.labor_hours %>
+      <%= w.labor_hours %>
     </li>
     <li>
-      <%= workorder.description %>
+      <%= w.description %>
     </li>
   <% end %>
 </ul>
