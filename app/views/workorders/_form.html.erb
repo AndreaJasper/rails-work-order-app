@@ -1,4 +1,4 @@
-<%= form_with model: Workorder.new do |f| %>
+<%= form_for(@workorder) do |f| %>
   <div>
     <%= f.label :title %><br>
     <%= f.text_field :title%>
@@ -22,6 +22,6 @@
 
   </div>
   <div>
-    <%= f.submit %>
+    <%= f.submit "Create Workorder", "aria-label": "Sign up", class: "btn btn-lg btn-primary mt-3" %>
   </div>
 <% end %>

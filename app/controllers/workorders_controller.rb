@@ -19,7 +19,7 @@ class WorkordersController < ApplicationController
     if @workorder.save
       redirect_to @workorder
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -33,7 +33,7 @@ class WorkordersController < ApplicationController
     if @workorder.update(workorder_params)
       redirect_to @workorder
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -41,7 +41,7 @@ class WorkordersController < ApplicationController
     @workorder = Workorder.find(params[:id])
     @workorder.destroy
 
-    redirect_to root_path
+    redirect_to root_path, status: :see_other
   end
 
   private

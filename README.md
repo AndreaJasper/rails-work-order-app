@@ -20,6 +20,7 @@ sqlite '1.4'
 * Database initialization
 
 * How to run the test suite
+Run `bundle exec rspec` for the full test suite.
 
 * Services (job queues, cache servers, search engines, etc.)
 
