@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :workorders
   root "workorders#index"
+  
+  resources :workorders
 
   get 'signup' => 'users#new'
   resources :users

@@ -1,28 +1,25 @@
 <div class="signup">
-  <div class="container">
-    
     <%= form_for(@user) do |f| %>
-      <div class="field">
-        <%= f.label :username %>
-        <%= f.text_field :username %>
+      <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: 'form-control' %>
       </div>
-      <div class="field">
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: 'form-control' %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :email %>
-        <%= f.text_field :email %>
+          <%= f.text_field :email, class: 'form-control'  %>
       </div>
-      <div class="field">
+      <div class="form-group">
+        <%= f.label :username %>
+          <%= f.text_field :username, class: 'form-control'  %>
+      </div>
+      <div class="form-group">
         <%= f.label :password %>
-        <%= f.password_field :password %>
+          <%= f.password_field :password, class: 'form-control'  %>
       </div>
-
-      <div class="actions">
-        <%= f.submit "Create", class: "btn-submit" %>
-      </div>
+      <%= f.submit "Create", class: "btn btn-primary" %>
     <% end %>
-
-  </div>
 </div>
