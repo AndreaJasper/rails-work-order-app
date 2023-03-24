@@ -1,5 +1,5 @@
 class WorkordersController < ApplicationController
-  before_action :require_user, only: [:index, :show]
+  before_action :require_login, only: [:index, :show]
 
   def index
     @workorders = Workorder.all
